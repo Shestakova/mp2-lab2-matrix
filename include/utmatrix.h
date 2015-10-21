@@ -12,8 +12,8 @@
 
 using namespace std;
 
-const int MAX_VECTOR_SIZE = 100000000;
-const int MAX_MATRIX_SIZE = 10000;
+const int MAX_VECTOR_SIZE = 10000;
+const int MAX_MATRIX_SIZE = 1000;
 
 // Шаблон вектора
 template <class ValType>
@@ -30,8 +30,8 @@ public:
   int GetSize()      { return Size;       } // размер вектора
   int GetStartIndex(){ return StartIndex; } // индекс первого элемента
   ValType& operator[](int pos);             // доступ
-  bool operator==(const TVector &v) const;  // сравнение
-  bool operator!=(const TVector &v) const;  // сравнение
+  int operator==(const TVector &v) const;  // сравнение
+  int operator!=(const TVector &v) const;  // сравнение
   TVector& operator=(const TVector &v);     // присваивание
 
   // скалярные операции
@@ -80,12 +80,12 @@ ValType& TVector<ValType>::operator[](int pos)
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
-bool TVector<ValType>::operator==(const TVector &v) const
+int TVector<ValType>::operator==(const TVector &v) const
 {
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
-bool TVector<ValType>::operator!=(const TVector &v) const
+int TVector<ValType>::operator!=(const TVector &v) const
 {
 } /*-------------------------------------------------------------------------*/
 
